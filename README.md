@@ -4,7 +4,7 @@ In this documentation, I have given you the step by step process to convert your
 You can watch the explanation and demo of this documentation and process [in this video on YouTube](https://youtu.be/novOo2cjWbs).
 
 So, how do you convert your website into PWA?
-### Here are what you have to do:
+## Here are what you have to do:
 1. Create manifest.json and call it at index.html file.
     manifest.json file includes the information about the PWA like its name, theme, icons, and so on.
 2. Generate app icons and add them in index.html and manifest.json files.
@@ -13,8 +13,8 @@ So, how do you convert your website into PWA?
     Servive Worker file works to communicate between your application and the network.
 4. Register service-worker at main.js file.
 
-### Let's dive into these steps.
-#### Create manifest.json and call it at index.html file.
+## Let's dive into these steps.
+### Create manifest.json and call it at index.html file.
   1. Create manifest.json file at the root directory and add the following details.
   ```
   {
@@ -95,7 +95,7 @@ So, how do you convert your website into PWA?
   <link rel="manifest" href="/manifest.json">
   ```
 
-#### Generate app icons and add them in index.html and manifest.json files.
+### Generate app icons and add them in index.html and manifest.json files.
   1. Go to [favicon-generator.org](https://www.favicon-generator.org) and generate your icons.
   2. Add them to your index.html. Note that they are already added to manifest.json file.
   ```
@@ -117,7 +117,7 @@ So, how do you convert your website into PWA?
   <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#f8f9fa">
   ```
-#### Create service-worker file as sw.js.
+### Create service-worker file as sw.js.
   1. Create sw.js at the root directory and define caching and different events.
   ```
   const staticCacheName = 'site-static-v1';
@@ -168,7 +168,7 @@ So, how do you convert your website into PWA?
 
   ```
 
-#### Register service-worker at main.js file.
+### Register service-worker at main.js file.
   1. Call sw.js at main.js file.
   ```
   if('serviceWorker' in navigator){
