@@ -16,7 +16,7 @@ So, how do you convert your website into PWA?
 ## Let's dive into these steps.
 ### Create manifest.json and call it at index.html file.
   1. Create manifest.json file at the root directory and add the following details.
-  ```
+  ```json
   {
     "name": "App Name",
     "short_name": "App",
@@ -91,14 +91,14 @@ So, how do you convert your website into PWA?
   }
   ```
   2. In the head section of index.html, call manifest.json file with following tag.
-  ```
+  ```html
   <link rel="manifest" href="/manifest.json">
   ```
 
 ### Generate app icons and add them in index.html and manifest.json files.
   1. Go to [favicon-generator.org](https://www.favicon-generator.org) and generate your icons.
   2. Add them to your index.html. Note that they are already added to manifest.json file.
-  ```
+  ```html
   <meta name="apple-mobile-web-app-status-bar" content="#e8edfc">
   <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
@@ -119,7 +119,7 @@ So, how do you convert your website into PWA?
   ```
 ### Create service-worker file as sw.js.
   1. Create sw.js at the root directory and define caching and different events.
-  ```
+  ```js
   const staticCacheName = 'site-static-v1';
   const assets = [
     '/',
@@ -170,7 +170,7 @@ So, how do you convert your website into PWA?
 
 ### Register service-worker at main.js file.
   1. Call sw.js at main.js file.
-  ```
+  ```js
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('/sw.js')
       .then(reg => console.log('service worker registered'))
