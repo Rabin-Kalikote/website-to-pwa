@@ -6,16 +6,13 @@ You can watch the explanation and demo of this documentation and process [in thi
 So, how do you convert your website into PWA?
 ## Here are what you have to do:
 1. Create manifest.json and call it at index.html file.
-    manifest.json file includes the information about the PWA like its name, theme, icons, and so on.
-2. Generate app icons and add them in index.html and manifest.json files.
-    We will generate the icons at [favicon-generator.org](https://www.favicon-generator.org).
-3. Create service-worker file as sw.js.
-    Servive Worker file works to communicate between your application and the network.
+2. Generate app icons and add them in index.html and manifest.json files.    
+3. Create service-worker file as sw.js.    
 4. Register service-worker at main.js file.
 
 ## Let's dive into these steps.
 ### Create manifest.json and call it at index.html file.
-  1. Create manifest.json file at the root directory and add the following details.
+  1. Create manifest.json file at the root directory and add the following details. manifest.json file includes the information about the PWA like its name, theme, icons, and so on.
   ```json
   {
     "name": "App Name",
@@ -96,6 +93,7 @@ So, how do you convert your website into PWA?
   ```
 
 ### Generate app icons and add them in index.html and manifest.json files.
+  We will generate the icons at [favicon-generator.org](https://www.favicon-generator.org).
   1. Go to [favicon-generator.org](https://www.favicon-generator.org) and generate your icons.
   2. Add them to your index.html. Note that they are already added to manifest.json file.
   ```html
@@ -118,6 +116,7 @@ So, how do you convert your website into PWA?
   <meta name="theme-color" content="#f8f9fa">
   ```
 ### Create service-worker file as sw.js.
+  Servive Worker file works to communicate between your application and the network.
   1. Create sw.js at the root directory and define caching and different events.
   ```js
   const staticCacheName = 'site-static-v1';
