@@ -14,8 +14,8 @@ So, how do you convert your website into PWA?
 4. Register service-worker at main.js file.
 
 ### Let's dive into these steps.
-1. Create manifest.json and call it at index.html file.
-  - Create manifest.json file at the root directory and add the following details.
+#### Create manifest.json and call it at index.html file.
+  1. Create manifest.json file at the root directory and add the following details.
   ```
   {
     "name": "App Name",
@@ -90,14 +90,14 @@ So, how do you convert your website into PWA?
     ]
   }
   ```
-  - In the head section of index.html, call manifest.json file with following tag.
+  2. In the head section of index.html, call manifest.json file with following tag.
   ```
   <link rel="manifest" href="/manifest.json">
   ```
 
-2. Generate app icons and add them in index.html and manifest.json files.
-  - Go to [favicon-generator.org](https://www.favicon-generator.org) and generate your icons.
-  - Add them to your index.html. Note that they are already added to manifest.json file.
+#### Generate app icons and add them in index.html and manifest.json files.
+  1. Go to [favicon-generator.org](https://www.favicon-generator.org) and generate your icons.
+  2. Add them to your index.html. Note that they are already added to manifest.json file.
   ```
   <meta name="apple-mobile-web-app-status-bar" content="#e8edfc">
   <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
@@ -117,8 +117,8 @@ So, how do you convert your website into PWA?
   <meta name="msapplication-TileImage" content="img/favicon/ms-icon-144x144.png">
   <meta name="theme-color" content="#f8f9fa">
   ```
-3. Create service-worker file as sw.js.
-  - Create sw.js at the root directory and define caching and different events.
+#### Create service-worker file as sw.js.
+  1. Create sw.js at the root directory and define caching and different events.
   ```
   const staticCacheName = 'site-static-v1';
   const assets = [
@@ -168,8 +168,8 @@ So, how do you convert your website into PWA?
 
   ```
 
-4. Register service-worker at main.js file.
-  - Call sw.js at main.js file.
+#### Register service-worker at main.js file.
+  1. Call sw.js at main.js file.
   ```
   if('serviceWorker' in navigator){
     navigator.serviceWorker.register('/sw.js')
