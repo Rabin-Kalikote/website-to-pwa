@@ -1,7 +1,7 @@
 # Change your Website to PWA
 In this documentation, I have given you the step by step process to convert your static website into full functional Progressive Web Application (PWA).
 
-You can watch the explanation and demo of this documentation and process [in this video on YouTube](https://youtu.be/novOo2cjWbs).
+You can watch the explanation and demo of this documentation and process [in this video on YouTube](https://youtu.be/7DRrz0L65pA).
 
 So, how do you convert your website into PWA?
 ## Here are what you have to do:
